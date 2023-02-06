@@ -1,0 +1,154 @@
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+@font-face {
+    font-family:title;
+    src: url(fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: body;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: label;
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: input;
+    src: url(fonts/Poppins-SemiBold.ttf);
+}
+
+/* general config */
+h1{
+    color: white;
+    font-family: title;
+    font-size: xx-large;
+}
+
+h2{
+    color: white;
+    font-family: label;
+    font-size: smaller
+}
+
+h2 strong{
+    font-family: body;
+} 
+
+
+p{
+    color: white;
+    font-family: body;
+    font-size: small;
+}
+/* end general config */
+/* VP config */
+body{
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: var(--red);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+main{
+    padding: 10vh;
+    grid-column: 2 / 12;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
+/*  end VP config */
+/* fist page config */
+.container-text{
+ grid-column: 1 / 6;   
+ display: grid;
+ grid-template-columns: repeat(6, 1fr);
+}
+
+.container-text h1{
+    grid-column: 1 / 5;
+    grid-row: 1;
+    display: flex;
+    align-items: flex-end;
+}
+.container-text .text{
+    grid-column: 1 / 6;
+    grid-row: 2;
+}
+
+/* end fist page config */
+/* second page config */
+
+.container-form{
+    grid-column: 6 / 12;
+    box-shadow: 0px 5px 5px rgba(88, 88, 88, 0.367);
+}
+
+.container-form > * {
+    margin-top: 15px;
+}
+
+.container-form h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    border-radius: 4px;
+    height: 50px;
+    box-shadow: 0px 5px 0px rgba(88, 88, 88, 0.367);
+    color: white
+}
+/* form config */
+form{
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    background-color: white;
+    border-radius: 8px;
+    /* height: 60vh; */
+    padding: 10px 0px;
+}
+
+form input{
+    border-style: solid;
+    border-width: 1px;
+    border-color:whitesmoke;
+    grid-column: 2 / 11;
+    height: 50px;
+    padding: 0px 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: input;
+}
+input:focus{
+    border-color: black;
+    box-shadow: 0px 5px 5px rgba(88, 88, 88, 0.367);
+
+}
+
+input[type ="submit"]{
+    background-color: var(--green);
+    color: white;
+    box-shadow: 0px 5px 5px rgba(88, 88, 88, 0.367);
+
+}
+
+.form-information{
+    grid-column: 2 / 11;
+    font-size: x-small;
+    text-align: center;
+    color: var(--dark-blue);
+}
+.form-information a{
+    color: var(--red)
+}
+/* end form config */
+
+/* end second page config */
