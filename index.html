@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="statics/reset.css">
     <link rel="stylesheet" href="statics/landing-page.css">
+    <link rel="stylesheet" href="statics/responsive.css">
+    <script src="statics/script.js" defer></script>
     <link rel="shortcut icon" href="statics/images/favicon-32x32.png" type="image/x-icon">
     <title>Register</title>
 </head>
@@ -31,10 +33,10 @@
                     <strong>Try is free 7 days</strong> then $20/mo. thereafter
                 </span>
             </h2>
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="return isValid()">
                 <input type="text" placeholder="First Name" id="first-name">
                 <input type="text" placeholder="Last Name" id="last-name">
-                <input type="email" placeholder="Email Address" id="email-name">
+                <input type="email" placeholder="Email Address" id="email">
                 <input type="password" placeholder="Password" id="password">
                 <input type="submit" value="CLAIM YOUR FREE TRIAL">
                 <p class="form-information">
